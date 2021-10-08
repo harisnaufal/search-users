@@ -11,6 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { QueryClient, QueryClientProvider } from 'react-query';
 // Screen
 import Dashboard from './screens/Dashboard';
+import Details from './screens/Details';
 // Context
 import { AuthContext } from './context/Context';
 // Constants
@@ -48,6 +49,7 @@ export default function App() {
                 <NavigationContainer>
                   <Stack.Navigator initialRouteName='Dashboard'>
                     <Stack.Screen name='Dashboard' component={Dashboard} />
+                    <Stack.Screen name='Details' component={Details} />
                   </Stack.Navigator>
                 </NavigationContainer>
               </View>

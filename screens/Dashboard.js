@@ -15,7 +15,7 @@ import _ from 'lodash';
 // Actions
 import { getUserList, resetList } from '../store/actions/dashboard';
 // Constants
-import { Colors, Sizing } from '../constants';
+import { Colors } from '../constants';
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: Colors.WHITE },
@@ -134,6 +134,14 @@ const Dashboard = ({ navigation }) => {
     <View style={styles.container}>
       <StatusBar barStyle='dark-content' backgroundColor={Colors.PRIMARYBLUE} />
       <View style={styles.content}>{renderSearchBar()}</View>
+      <Pressable
+        style={styles.content}
+        onPress={() => {
+          navigation.navigate('Details');
+        }}
+      >
+        <Text>{`Question 1 & 2`}</Text>
+      </Pressable>
       <View>{renderContent()}</View>
     </View>
   );
